@@ -6,6 +6,9 @@ from scrapy.spider import Spider
 from scrapy.http import Request
 from scrapy.selector import Selector
 
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 def change_word(s):
         sum=0
         for i in s[0]:
@@ -22,17 +25,40 @@ def change_word(s):
 
 class MydomainSpider(scrapy.Spider):
     name = "mydomain"
-    allowed_domains = ["http://so.csdn.net/so/search/s.do?q=python&q=python"]
-    start_urls = (
-        'http://php.itcast.cn/',
-    )
-
+    start_urls = ['http://www.baidu.com/s?wd=python&ie=utf-8']
 
     def parse(self, response):
         sel = Selector(response)
-        sites = sel.xpath('//ul[@class="huodong11"]/li')
-        for site in sites:
-            temp=site.xpath('a/span/text()').extract()
-            if(len(temp)!=0):
-                change_word(temp)
-                print "-----------------------------------------------"
+        items=[]
+        sites=sel.xpath('//div[@id="content_left"]/div')
+        item=DmozItem()
+        article_url = sites.xpath('//h3/a/@href').extract()
+        article_name = sites.xpath('//h3/a/text()').extract()
+        article_body= sites.xpath('//div[@class="c-abstract"]').extract()
+
+        item['title']= [n.encode('utf-8') for n in article_name]
+        item['link']= [n.encode('utf-8') for n in article_url]
+        item['body']=[n.encode('utf-8') for n in article_body]
+        items.append(item)
+        yield item
+        #yield items
+        # for a_item in article_name:
+        #     item=DmozItem()
+        #     item['title']= a_item
+        #     yield item
+        #     items.append(item)
+        # for a_item in article_url:
+        #     item=DmozItem()
+        #     item['link']= a_item
+        #     yield item
+        #     items.append(item)
+        # for a_item in article_body:
+        #     item=DmozItem()
+        #     item['body']=a_item
+        #     items.append(item)
+        #     yield item
+        # yield items
+
+        for url in sel.xpath('//div[@id="page"]').extract():
+            url="https://www.baidu.com"+url
+            yield Request(url,callback=self)

@@ -17,7 +17,7 @@ NEWSPIDER_MODULE = 'tutorial.spiders'
 COOKIES_ENABLED = True
 
 ITEM_PIPELINES = {
-    'tutorial.pipelines.CsdnblogPipeline':300
+    'tutorial.pipelines.CsdnblogPipeline':800
 }
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
