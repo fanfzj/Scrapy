@@ -21,8 +21,8 @@ class CitySpider(scrapy.Spider):
         sites = sel.xpath("//dl[@id='clist']/dd/a/text()").extract()
         item['title'] = [n.encode('utf-8') for n in sites]
         yield item
-        sql = "select ID,CityName from Cities"
-        cursor.execute(sql)
+        #sql = "select ID,CityName from Cities"
+        #cursor.execute(sql)
         # for (ID,CityName) in cursor.fetchall():
         #     print ID
         for name in item['title']:

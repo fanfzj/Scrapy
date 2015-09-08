@@ -19,3 +19,4 @@ class DmozItem(scrapy.Item):
     image=scrapy.Field()
     article_name=scrapy.Field()
     article_url=scrapy.Field()
+    json=scrapy.Field()
