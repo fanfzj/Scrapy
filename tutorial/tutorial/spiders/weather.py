@@ -46,7 +46,6 @@ class WeatherSpider(scrapy.Spider):
         for site in items:
             jsons = json.dumps(site["json"]).encode("utf-8")
             ddata = json.loads(jsons)
-            # print ddata['data']['forecast'][0]
             if (ddata['desc'] == "OK"):
                 for info in ddata['data']['forecast']:
                     sql = "Insert into Weather(city_name,wendu,ganmao,fengxiang,fengli,high,low,weather_type,show_date,datetime)values('" + \
@@ -58,15 +57,6 @@ class WeatherSpider(scrapy.Spider):
                     cursor.execute(sql)
                     conn.commit()
 
-        # conn = pymssql.connect(host="121.42.136.4", user="sa", password="koala19920716!@#", database="test")
-        # cursor = conn.cursor()
-        # print sel
-        # for site in sel['data']:
-        #     print site
-        # for site in sel['data']:
-        #     sql = "Insert into Weather(CityName)values('" + site['city'] + "')"
-        #     cursor.execute(sql)
-        #     conn.commit()
         int = WeatherSpider.i - 1
         sql = "select Top 1 CityName from Cities where id not in (select top " + str(int) + " id from Cities)"
         print sql.encode("gbk")
