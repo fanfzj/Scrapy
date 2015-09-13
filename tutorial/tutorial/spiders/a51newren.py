@@ -23,7 +23,7 @@ class A51newrenSpider(scrapy.Spider):
     name = "51newren"
     allowed_domains = ["51newren.com"]
     start_urls = (
-        'http://www.51newren.com/',
+        'http://www.51newren.com/Login',
     )
     def parse(self, response):
         sel = scrapy.Selector(response)
