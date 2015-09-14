@@ -20,3 +20,4 @@ class DmozItem(scrapy.Item):
     article_name=scrapy.Field()
     article_url=scrapy.Field()
     json=scrapy.Field()
+    id = scrapy.Field()

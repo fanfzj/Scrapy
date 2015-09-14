@@ -23,7 +23,7 @@ class WeiboSpider(CrawlSpider):
         print response.body
         hxs = HtmlXPathSelector(response)
         i = DmozItem()
-        # i['domain_id'] = hxs.select('//input[@id="sid"]/@value').extract()
-        # i['name'] = hxs.select('//div[@id="name"]').extract()
-        # i['description'] = hxs.select('//div[@id="description"]').extract()
+        i['id'] = hxs.select('//input[@id="sid"]/@value').extract()
+        i['title'] = hxs.select('//div[@id="name"]').extract()
+        i['desc'] = hxs.select('//div[@id="description"]').extract()
         return i
