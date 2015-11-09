@@ -59,7 +59,6 @@ class WeatherSpider(scrapy.Spider):
 
         int = WeatherSpider.i - 1
         sql = "select Top 1 CityName from Cities where id not in (select top " + str(int) + " id from Cities)"
-        print sql.encode("gbk")
         cursor.execute(sql)
         for (CityName) in cursor.fetchall():
             url = "http://wthrcdn.etouch.cn/weather_mini?city=" + change_word(CityName)

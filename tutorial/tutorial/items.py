@@ -19,5 +19,6 @@ class DmozItem(scrapy.Item):
     image=scrapy.Field()
     article_name=scrapy.Field()
     article_url=scrapy.Field()
+    article_label = scrapy.Field();
     json=scrapy.Field()
     id = scrapy.Field()

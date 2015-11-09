@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
-import scrapy
 import sys
-from tutorial.items import DmozItem
-from scrapy.spider import Spider
+
+import scrapy
 from scrapy.http import Request
 from scrapy.selector import Selector
+
+from tutorial.items import DmozItem
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -25,40 +26,37 @@ def change_word(s):
 
 class MydomainSpider(scrapy.Spider):
     name = "mydomain"
-    start_urls = ['http://www.baidu.com/s?wd=python&ie=utf-8']
+    download_delay = 1
+    allowed_domains = ["blog.csdn.net"]
+    start_urls = [
+        "http://blog.csdn.net/u012150179/article/details/11749017"
+    ]
 
     def parse(self, response):
         sel = Selector(response)
-        items=[]
-        sites=sel.xpath('//div[@id="content_left"]/div')
-        item=DmozItem()
-        article_url = sites.xpath('//h3/a/@href').extract()
-        article_name = sites.xpath('//h3/a/text()').extract()
-        article_body= sites.xpath('//div[@class="c-abstract"]').extract()
+        item = DmozItem()
+        # ISOTIMEFORMAT = '%Y-%m-%d %X'
+        # datetime=time.strftime(ISOTIMEFORMAT,time.localtime())
+        # conn=MySQLdb.connect(host='localhost',user='root',passwd='root',db='blog',port=3306,charset='utf8')
+        # cursor = conn.cursor()
 
-        item['title']= [n.encode('utf-8') for n in article_name]
-        item['link']= [n.encode('utf-8') for n in article_url]
-        item['body']=[n.encode('utf-8') for n in article_body]
-        items.append(item)
-        yield item
-        #yield items
-        # for a_item in article_name:
-        #     item=DmozItem()
-        #     item['title']= a_item
-        #     yield item
-        #     items.append(item)
-        # for a_item in article_url:
-        #     item=DmozItem()
-        #     item['link']= a_item
-        #     yield item
-        #     items.append(item)
-        # for a_item in article_body:
-        #     item=DmozItem()
-        #     item['body']=a_item
-        #     items.append(item)
-        #     yield item
-        # yield items
-
-        for url in sel.xpath('//div[@id="page"]').extract():
-            url="https://www.baidu.com"+url
-            yield Request(url,callback=self)
+        article_url = str(response.url)
+        article_name = sel.xpath('//div[@id="article_details"]/div/h1/span/a/text()').extract()
+        article_body = sel.xpath('//div[@id="article_details"]/div[@id="article_content"]').extract()
+        article_label = sel.xpath('//div[@class="article_manage"]/span[@class="link_categories"]/a/text()').extract()
+        if (len(article_body) != 0):
+            if (len(article_label) != 0):
+                item['body'] = article_body[0].encode('utf-8')
+                item['article_label'] = article_label[0].encode('utf-8')
+                item['article_name'] = article_name[0].encode('utf-8')
+                item['article_url'] = article_url.encode('utf-8')
+            else:
+                print article_url + "   article_label"
+            print article_url + "      " + str([n.encode('utf-8') for n in article_name])
+        else:
+            print article_url + "   article_body"
+        urls = sel.xpath('//li[@class="next_article"]/a/@href').extract()
+        for url in urls:
+            url = "http://blog.csdn.net" + url
+            # print type(url)
+            yield Request(url, callback=self.parse)

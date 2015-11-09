@@ -32,6 +32,9 @@ class CnhubeiSpider(scrapy.Spider):
                 links = list_body.xpath("//a/@href").extract()
                 if (links[0][0] == "."):
                     links[0] = "http://news.cnhubei.com" + links[0][1:]
+                # print links[0]
+                # print type(links[0])
+                # print "--------------"
                 yield scrapy.Request(url=links[0], meta={'desc': desc[0].encode('utf-8'), 'source': response.url},
                                      callback=self.parse_word)
 
@@ -48,6 +51,8 @@ class CnhubeiSpider(scrapy.Spider):
                 yield scrapy.Request(url=links[0], meta={'desc': desc[0].encode('utf-8')}, callback=self.parse_word)
 
     def parse_word(self, response):
+        # print response.meta['desc']
+        item = DmozItem()
         desc = response.meta['desc']
         ISOTIMEFORMAT = '%Y-%m-%d %X'
         conn = pymssql.connect(host="121.42.136.4", user="sa", password="koala19920716!@#", database="OpenData")
@@ -73,6 +78,10 @@ class CnhubeiSpider(scrapy.Spider):
                 content += n
             else:
                 content += n
+        # item['title']=[n.decode("utf8").encode('gbk') for n in title]
+        # item['body']=content.decode("utf8").encode('gbk')
+        # item['desc']=desc.decode("utf8").encode('gbk')
+        # item['link']=href.decode("utf8").encode('gbk')
 
         sql = "Insert into T_News(Title,Content,DateTime,Url,Source,Category)values('" + title[0].encode(
             'utf-8') + "','" + content.encode('utf-8') + "','" + time.strftime(ISOTIMEFORMAT,
