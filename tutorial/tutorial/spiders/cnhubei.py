@@ -82,10 +82,16 @@ class CnhubeiSpider(scrapy.Spider):
         # item['body']=content.decode("utf8").encode('gbk')
         # item['desc']=desc.decode("utf8").encode('gbk')
         # item['link']=href.decode("utf8").encode('gbk')
-
-        sql = "Insert into T_News(Title,Content,DateTime,Url,Source,Category)values('" + title[0].encode(
-            'utf-8') + "','" + content.encode('utf-8') + "','" + time.strftime(ISOTIMEFORMAT,
-                                                                               time.localtime()) + "','" + href.encode(
-            'utf-8') + "','荆楚网','" + desc + "')"
-        cursor.execute(sql)
-        conn.commit()
+        select_sql = "select * from  T_News where title=%s"
+        parm = (title[0].encode('utf-8'))
+        cursor.execute(select_sql, parm)
+        result = cursor.fetchall()
+        if (len(result) == 0):
+            sql = "Insert into T_News(Title,Content,DateTime,Url,Source,Category)values('" + title[0].encode(
+                'utf-8') + "','" + content.encode('utf-8') + "','" + time.strftime(ISOTIMEFORMAT,
+                                                                                   time.localtime()) + "','" + href.encode(
+                'utf-8') + "','荆楚网','" + desc + "')"
+            cursor.execute(sql)
+            conn.commit()
+        else:
+            print "Is have"

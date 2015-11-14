@@ -52,24 +52,29 @@ class CsdnSpider(scrapy.Spider):
                 "//div[@id='article_details']/div[@class='article_title']/h1/span[@class='link_title']/a/text()").extract()
             body = word_sel.xpath("//div[@class='details']/div[@class='article_content']").extract()
             # label=word_sel.xpath("//div[@id='article_details']/div[@id='article_content']")
-            label = label.replace('[', '').replace(']', '')
-            cursor.execute("select * from label_list where label_name = '" + label + "'");
-            result = cursor.fetchall()
-            if (len(result) == 0):
-                # print "null"
-                insert_sql = "Insert into label_list(label_name) VALUE ('" + label + "')";
-                label_id = cursor.execute(insert_sql)
-
-            else:
-                # print result[0][0]
-                label_id = result[0][0]
             content = str(title[0].encode('utf-8')).replace(' ', '')
-            if (content != None):
-                sql = "Insert into word(title,datetime,label_id,text) values (%s,%s,%s,%s)"
-                parm = (content, datetime, label_id, body[0].encode('utf-8'))
-                cursor.execute(sql, parm)
-                conn.commit()
-                # cursor.close()
-                # conn.close()
+            cursor.execute("select * from word where title =%s", content);
+            tf = cursor.fetchall()
+            if (len(tf) == 0):
+                label = label.replace('[', '').replace(']', '')
+                cursor.execute("select * from label_list where label_name = '" + label + "'");
+                result = cursor.fetchall()
+                if (len(result) == 0):
+                    # print "null"
+                    insert_sql = "Insert into label_list(label_name) VALUE ('" + label + "')";
+                    label_id = cursor.execute(insert_sql)
+
+                else:
+                    # print result[0][0]
+                    label_id = result[0][0]
+                if (len(content) != 0):
+                    sql = "Insert into word(title,datetime,label_id,text,href) values (%s,%s,%s,%s)"
+                    parm = (content, datetime, label_id, body[0].encode('utf-8'), href)
+                    cursor.execute(sql, parm)
+                    conn.commit()
+            else:
+                print "Is have"
+                cursor.close()
+                conn.close()
         except MySQLdb.Error, e:
             print "Mysql Error %d: %s" % (e.args[0], e.args[1])

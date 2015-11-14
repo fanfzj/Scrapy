@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="17924c3e-d336-4cb5-86b0-4bab082389f3" name="Default" comment="51牛人模拟登录">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutorial/spiders/csdn.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/middlewares.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutorial/middlewares.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutorial/rotate_useragent.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutorial/spiders/rotate_useragent.py" />
+    <list default="true" id="17924c3e-d336-4cb5-86b0-4bab082389f3" name="Default" comment="增加ip池设置，爬取CSDN热门文章">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/spiders/cnhubei.py" afterPath="$PROJECT_DIR$/tutorial/spiders/cnhubei.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/spiders/csdn.py" afterPath="$PROJECT_DIR$/tutorial/spiders/csdn.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/spiders/dmoz_spider.py" afterPath="$PROJECT_DIR$/tutorial/spiders/dmoz_spider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/items.py" afterPath="$PROJECT_DIR$/tutorial/items.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/spiders/mydomain.py" afterPath="$PROJECT_DIR$/tutorial/spiders/mydomain.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/settings.py" afterPath="$PROJECT_DIR$/tutorial/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/spiders/weather.py" afterPath="$PROJECT_DIR$/tutorial/spiders/weather.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tutorial.iws" />
@@ -39,82 +32,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tutorial/items.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="weather.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tutorial/spiders/weather.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8752053">
-              <caret line="64" column="51" selection-start-line="64" selection-start-column="51" selection-end-line="64" selection-end-column="51" />
-              <folding>
-                <marker date="1442450537555" expanded="true" signature="1317:2013" placeholder="Insert into ..." />
-                <marker date="1442450537555" expanded="true" signature="2139:2233" placeholder="select Top 1..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="cnhubei.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tutorial/spiders/cnhubei.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="85" column="54" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="54" />
+              <caret line="93" column="27" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
               <folding>
-                <element signature="e#24#38#0" expanded="true" />
-                <marker date="1446598858379" expanded="true" signature="3542:3894" placeholder="Insert into ..." />
+                <marker date="1447476745424" expanded="true" signature="3589:3610" placeholder="select * fro..T_News..." />
+                <marker date="1447476745424" expanded="true" signature="3589:3622" placeholder="select * fro..T_News..." />
+                <marker date="1447476745424" expanded="true" signature="3589:3623" placeholder="select * fro..T_News..." />
+                <marker date="1447476745424" expanded="true" signature="3595:3610" placeholder="Insert into ..." />
+                <marker date="1447476745424" expanded="true" signature="3793:3863" placeholder="Insert into ..." />
+                <marker date="1447476745424" expanded="true" signature="3793:4039" placeholder="Insert into ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="csdn.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="csdn.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tutorial/spiders/csdn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="16" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.2217514">
+              <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
               <folding>
-                <element signature="e#24#37#0" expanded="true" />
-                <marker date="1446622571508" expanded="true" signature="2073:2114" placeholder="select * fro..label_list..." />
-                <marker date="1446622571508" expanded="true" signature="2073:2118" placeholder="select * fro..label_list..." />
-                <marker date="1446622571508" expanded="true" signature="2073:2128" placeholder="select * fro..label_list..." />
-                <marker date="1446622571508" expanded="true" signature="2073:2130" placeholder="select * fro..label_list..." />
-                <marker date="1446622571508" expanded="true" signature="2073:2131" placeholder="select * fro..label_list..." />
-                <marker date="1446622571508" expanded="true" signature="2260:2303" placeholder="Insert into ..." />
-                <marker date="1446622571508" expanded="true" signature="2260:2314" placeholder="Insert into ..." />
-                <marker date="1446622571508" expanded="true" signature="2583:2650" placeholder="Insert into ..." />
+                <element signature="e#24#35#0" expanded="true" />
+                <marker date="1447481808030" expanded="true" signature="2049:2081" placeholder="select * fro..word..." />
+                <marker date="1447481808030" expanded="true" signature="2049:2093" placeholder="select * fro..word..." />
+                <marker date="1447481808030" expanded="true" signature="2257:2298" placeholder="select * fro..label_list..." />
+                <marker date="1447481808030" expanded="true" signature="2257:2302" placeholder="select * fro..label_list..." />
+                <marker date="1447481808030" expanded="true" signature="2257:2316" placeholder="select * fro..label_list..." />
+                <marker date="1447481808030" expanded="true" signature="2257:2318" placeholder="select * fro..label_list..." />
+                <marker date="1447481808030" expanded="true" signature="2257:2319" placeholder="select * fro..label_list..." />
+                <marker date="1447481808030" expanded="true" signature="2471:2514" placeholder="Insert into ..." />
+                <marker date="1447481808030" expanded="true" signature="2471:2529" placeholder="Insert into ..." />
+                <marker date="1447481808030" expanded="true" signature="2763:2835" placeholder="Insert into ..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dmoz_spider.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tutorial/spiders/dmoz_spider.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="11" />
-              <folding>
-                <marker date="1446771700119" expanded="true" signature="1784:1855" placeholder="select * fro..label_list..." />
-                <marker date="1446771700119" expanded="true" signature="2003:2073" placeholder="Insert into ..." />
-                <marker date="1446771700119" expanded="true" signature="2266:2333" placeholder="Insert into ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tutorial/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="125" column="52" selection-start-line="125" selection-start-column="52" selection-end-line="125" selection-end-column="52" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -123,18 +75,14 @@
         <entry file="file://$PROJECT_DIR$/tutorial/spiders/mydomain.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="city.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tutorial/spiders/city.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="58" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="58" />
-              <folding />
+              <caret line="94" column="31" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+              <folding>
+                <element signature="e#24#35#0" expanded="true" />
+                <marker date="1447481808026" expanded="true" signature="2319:2351" placeholder="select * fro..word..." />
+                <marker date="1447481808026" expanded="true" signature="2527:2586" placeholder="select * fro..label_list..." />
+                <marker date="1447481808026" expanded="true" signature="2747:2805" placeholder="Insert into ..." />
+                <marker date="1447481808026" expanded="true" signature="3137:3204" placeholder="Insert into ..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,17 +112,17 @@
         <option value="$PROJECT_DIR$/CSDNBlog_data.json" />
         <option value="$PROJECT_DIR$/tutorial/spiders/weibo_spider.py" />
         <option value="$PROJECT_DIR$/tutorial/spiders/a51newren.py" />
-        <option value="$PROJECT_DIR$/tutorial/spiders/weather.py" />
-        <option value="$PROJECT_DIR$/tutorial/spiders/cnhubei.py" />
-        <option value="$PROJECT_DIR$/tutorial/spiders/csdn.py" />
         <option value="$PROJECT_DIR$/tutorial/rotate_useragent.py" />
         <option value="$PROJECT_DIR$/tutorial/spiders/rotate_useragent.py" />
         <option value="$PROJECT_DIR$/tutorial/middlewares.py" />
         <option value="$PROJECT_DIR$/middlewares.py" />
         <option value="$PROJECT_DIR$/tutorial/spiders/middlewares.py" />
         <option value="$PROJECT_DIR$/tutorial/items.py" />
-        <option value="$PROJECT_DIR$/tutorial/spiders/dmoz_spider.py" />
         <option value="$PROJECT_DIR$/tutorial/settings.py" />
+        <option value="$PROJECT_DIR$/tutorial/spiders/weather.py" />
+        <option value="$PROJECT_DIR$/tutorial/spiders/cnhubei.py" />
+        <option value="$PROJECT_DIR$/tutorial/spiders/dmoz_spider.py" />
+        <option value="$PROJECT_DIR$/tutorial/spiders/csdn.py" />
         <option value="$PROJECT_DIR$/tutorial/spiders/mydomain.py" />
       </list>
     </option>
@@ -231,6 +179,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -283,8 +233,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -586,7 +534,13 @@
       <option name="project" value="LOCAL" />
       <updated>1442212470346</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="增加ip池设置，爬取CSDN热门文章">
+      <created>1447074559463</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1447074559464</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -602,7 +556,7 @@
     <frame x="1358" y="-320" width="1936" height="1066" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16950959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12100213" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32834226" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3187166" sideWeight="0.5063966" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -610,7 +564,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32834226" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31764707" sideWeight="0.4936034" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21176471" sideWeight="0.4936034" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -643,7 +597,8 @@
     <MESSAGE value="更新格式" />
     <MESSAGE value="新增 荆楚网 新闻撞去" />
     <MESSAGE value="51牛人模拟登录" />
-    <option name="LAST_COMMIT_MESSAGE" value="51牛人模拟登录" />
+    <MESSAGE value="增加ip池设置，爬取CSDN热门文章" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加ip池设置，爬取CSDN热门文章" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -962,21 +917,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/items.py">
+    <entry file="file://$PROJECT_DIR$/tutorial/spiders/weather.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/spiders/cnhubei.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="54" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.4040404">
+          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
           <folding>
-            <element signature="e#24#38#0" expanded="true" />
-            <marker date="1446598858379" expanded="true" signature="3542:3894" placeholder="Insert into ..." />
+            <marker date="1442450537555" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
+            <marker date="1442450537555" expanded="true" signature="-1:-1" placeholder="select Top 1..." />
           </folding>
         </state>
       </provider>
@@ -984,20 +931,12 @@
     <entry file="file://$PROJECT_DIR$/tutorial/spiders/dmoz_spider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="11" />
+          <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
           <folding>
-            <marker date="1446771700119" expanded="true" signature="1784:1855" placeholder="select * fro..label_list..." />
-            <marker date="1446771700119" expanded="true" signature="2003:2073" placeholder="Insert into ..." />
-            <marker date="1446771700119" expanded="true" signature="2266:2333" placeholder="Insert into ..." />
+            <marker date="1447477585978" expanded="true" signature="-1:-1" placeholder="select * fro..label_list..." />
+            <marker date="1447477585978" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
+            <marker date="1447477585978" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/spiders/city.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="58" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1009,39 +948,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/spiders/city.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4562147">
+          <caret line="21" column="58" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61723167">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/spiders/cnhubei.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="27" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
+          <folding>
+            <marker date="1447476745424" expanded="true" signature="3589:3610" placeholder="select * fro..T_News..." />
+            <marker date="1447476745424" expanded="true" signature="3589:3622" placeholder="select * fro..T_News..." />
+            <marker date="1447476745424" expanded="true" signature="3589:3623" placeholder="select * fro..T_News..." />
+            <marker date="1447476745424" expanded="true" signature="3595:3610" placeholder="Insert into ..." />
+            <marker date="1447476745424" expanded="true" signature="3793:3863" placeholder="Insert into ..." />
+            <marker date="1447476745424" expanded="true" signature="3793:4039" placeholder="Insert into ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/spiders/mydomain.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-          <folding />
+          <caret line="94" column="31" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1447481808026" expanded="true" signature="2319:2351" placeholder="select * fro..word..." />
+            <marker date="1447481808026" expanded="true" signature="2527:2586" placeholder="select * fro..label_list..." />
+            <marker date="1447481808026" expanded="true" signature="2747:2805" placeholder="Insert into ..." />
+            <marker date="1447481808026" expanded="true" signature="3137:3204" placeholder="Insert into ..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/spiders/csdn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.2217514">
+          <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
           <folding>
-            <element signature="e#24#37#0" expanded="true" />
-            <marker date="1446622571508" expanded="true" signature="2073:2114" placeholder="select * fro..label_list..." />
-            <marker date="1446622571508" expanded="true" signature="2073:2118" placeholder="select * fro..label_list..." />
-            <marker date="1446622571508" expanded="true" signature="2073:2128" placeholder="select * fro..label_list..." />
-            <marker date="1446622571508" expanded="true" signature="2073:2130" placeholder="select * fro..label_list..." />
-            <marker date="1446622571508" expanded="true" signature="2073:2131" placeholder="select * fro..label_list..." />
-            <marker date="1446622571508" expanded="true" signature="2260:2303" placeholder="Insert into ..." />
-            <marker date="1446622571508" expanded="true" signature="2260:2314" placeholder="Insert into ..." />
-            <marker date="1446622571508" expanded="true" signature="2583:2650" placeholder="Insert into ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/spiders/weather.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8752053">
-          <caret line="64" column="51" selection-start-line="64" selection-start-column="51" selection-end-line="64" selection-end-column="51" />
-          <folding>
-            <marker date="1442450537555" expanded="true" signature="1317:2013" placeholder="Insert into ..." />
-            <marker date="1442450537555" expanded="true" signature="2139:2233" placeholder="select Top 1..." />
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1447481808030" expanded="true" signature="2049:2081" placeholder="select * fro..word..." />
+            <marker date="1447481808030" expanded="true" signature="2049:2093" placeholder="select * fro..word..." />
+            <marker date="1447481808030" expanded="true" signature="2257:2298" placeholder="select * fro..label_list..." />
+            <marker date="1447481808030" expanded="true" signature="2257:2302" placeholder="select * fro..label_list..." />
+            <marker date="1447481808030" expanded="true" signature="2257:2316" placeholder="select * fro..label_list..." />
+            <marker date="1447481808030" expanded="true" signature="2257:2318" placeholder="select * fro..label_list..." />
+            <marker date="1447481808030" expanded="true" signature="2257:2319" placeholder="select * fro..label_list..." />
+            <marker date="1447481808030" expanded="true" signature="2471:2514" placeholder="Insert into ..." />
+            <marker date="1447481808030" expanded="true" signature="2471:2529" placeholder="Insert into ..." />
+            <marker date="1447481808030" expanded="true" signature="2763:2835" placeholder="Insert into ..." />
           </folding>
         </state>
       </provider>
