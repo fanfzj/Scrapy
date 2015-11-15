@@ -68,7 +68,7 @@ class CsdnSpider(scrapy.Spider):
                     # print result[0][0]
                     label_id = result[0][0]
                 if (len(content) != 0):
-                    sql = "Insert into word(title,datetime,label_id,text,href) values (%s,%s,%s,%s)"
+                    sql = "Insert into word(title,datetime,label_id,text,href) values (%s,%s,%s,%s,%s)"
                     parm = (content, datetime, label_id, body[0].encode('utf-8'), href)
                     cursor.execute(sql, parm)
                     conn.commit()
